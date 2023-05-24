@@ -1,0 +1,103 @@
+<meta charset="UTF-8">
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+}
+
+    function texto(frase) {
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+}
+
+    var anho = 2025;
+    texto("hola amigos");
+    // este codigo calcula las edades de juan, pedro y carlos
+    texto("juan tiene: " + (anho - 2000) + "años");
+    texto("pedro tiene: " + (anho - 1995) + "años");
+
+    anho = 2030 ;
+    texto("carlos tiene:" + (anho - 2005) + "años");
+</script>
+<h2>calcular imc (indice de masa corporal) con funcion</h2>
+<script>
+
+
+    function calcularImc(peso,altura) {
+        imc = peso / (altura * altura);
+        return(imc);
+    }
+    var pesoLucas = 73 ;
+    var alturaLucas = 1.60 ;
+    var imcLucas = calcularImc(pesoLucas,alturaLucas)
+    //var imcLucas = pesoLucas / (alturaLucas * alturaLucas) ;
+    texto(" el imc de lucas es : " + imcLucas);
+    
+
+</script>
+<h2>calcular imc con funcion mas resumido</h2>
+<script>
+    
+     function calcularImc(peso,altura,nombre) {
+        imc = peso / (altura * altura);
+        texto("el imc de " + nombre + " es " + imc );
+        
+    }
+
+    calcularImc(80,1.80,"lucas");
+    calcularImc(90,1.20,"marcos");
+    calcularImc(90,1.70,"pedro");
+</script>
+
+<h2>calcular imc solo con variables</h2>
+<script>
+    var pesoPaula = 63 ;
+    var alturaPaula = 1.60 ;
+    var imcPaula = pesoPaula / (alturaPaula * alturaPaula) ;
+    texto(" el imc de paula es : " + imcPaula);
+
+</script>
+
+
+<h2>calcular promedio de inc de dos personas</h2>
+<script>
+   function calcularImc(peso1,altura1,nombre1,peso2,altura2,nombre2) {
+        imc1 = peso1 / (altura1 * altura1);
+        imc2 = peso2 / (altura2 * altura2);
+        texto("el promedio de imc de " + nombre1 + " y " + nombre2 + " es: " + (imc1 + imc2)/2 );
+        }
+
+        calcularImc(80,1.80,"lucas",63,1.60,"paula") 
+        calcularImc(80,1.90,"octavio",50,1.60,"romina")    
+</script>
+----------------------------ejemplo mas resumido--------------------------------------------------
+<br>
+<script>
+    function calculoimc(peso,altura) {
+        imcr = peso / (altura * altura);
+        return(imcr); //el return indica que me va a devolver como respuesta la funcion que yo le indique 
+    }
+
+    var pesoromi = calculoimc(78,1.80);
+    var pesoandrea = calculoimc(60,1.70);
+
+
+    texto("el promedio del imc calculado de romina y andrea es: " + (pesoromi + pesoandrea) / 2);
+
+</script>
+---------------------------------------------interactuar con el usuario------------------------------
+<script>
+ function calculoimc(peso,altura) {
+        imcr = peso / (altura * altura);
+        return(imcr);  
+    }
+    
+
+    var nombre = prompt("informe su nombre :");
+    var peso = prompt(nombre + ",informe su peso :");
+    var altura = prompt(nombre + ",informe su altura :");
+    var imcusuario = calculoimc(peso,altura)
+    texto("<br>")
+    texto( nombre + ", tu imc es: " + imcusuario)
+        
+</script>

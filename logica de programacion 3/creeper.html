@@ -1,0 +1,52 @@
+<canvas width="600" height="400">
+	
+</canvas>
+
+<script>
+    function banderaRiver(x,y,color) {
+        var pantalla = document.querySelector ("canvas");
+        var pincel = pantalla.getContext("2d");
+                pincel.fillStyle = color ;
+                pincel.fillRect(x,y,50,50);
+                pincel.strokeStyle = "black";
+                pincel.strokeRect(x,y,50,50);
+
+               
+}
+        //usando while
+        var x = 0;
+        while (x < 600){
+            banderaRiver(x,0,"red");
+            banderaRiver(x,50,"white");
+            banderaRiver(x,100,"red");
+
+            x = x +50 ;
+        }
+
+        //usando for
+
+       // for (var x = 0 ; x <= 600; x+50) {
+       //     banderaRiver(x,0,"red");
+       //     banderaRiver(x,50,"white");
+      //      banderaRiver(x,100,"red");
+//
+      //      x = x +50 ;
+      //  }
+
+        
+	
+
+    //pincel.fillStyle = "darkgreen" ;
+    //pincel.fillRect(200,50,350,300);
+
+    //pincel.fillStyle = "black" ;
+    //pincel.fillRect(250,110,90,90);
+    //pincel.fillRect(410,110,90,90);
+    //pincel.fillRect(340,200,70,100);
+    //pincel.fillRect(300,240,40,110);
+    //pincel.fillRect(400,240,40,110);
+
+
+</script>
+
+    
